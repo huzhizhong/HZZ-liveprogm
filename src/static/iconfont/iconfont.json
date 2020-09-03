@@ -1,0 +1,44 @@
+{
+  "id": "2043488",
+  "name": "ti k to k",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "918721",
+      "name": "空爱心",
+      "font_class": "kongaixin",
+      "unicode": "e662",
+      "unicode_decimal": 58978
+    },
+    {
+      "icon_id": "1788970",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e6a6",
+      "unicode_decimal": 59046
+    },
+    {
+      "icon_id": "2078817",
+      "name": "dkw_消息 ",
+      "font_class": "dkw_xiaoxi",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "11615127",
+      "name": "直播",
+      "font_class": "zhibo",
+      "unicode": "e692",
+      "unicode_decimal": 59026
+    },
+    {
+      "icon_id": "16589975",
+      "name": "分享",
+      "font_class": "59fenxiang",
+      "unicode": "e631",
+      "unicode_decimal": 58929
+    }
+  ]
+}

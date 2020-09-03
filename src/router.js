@@ -14,6 +14,10 @@ const router = new Router({
     routes: [
         {
             path: '/',
+            redirect: 'index',
+        },
+        {
+            path: '/',
             name: 'home',
             component: Home,
             children: [
