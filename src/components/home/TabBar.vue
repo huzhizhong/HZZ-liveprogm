@@ -47,6 +47,7 @@ export default {
   font-size: 16px;
   display: flex;
   justify-items: center;
+  z-index: 999;
 }
 
 .tab-bar .item {

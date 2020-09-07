@@ -1,6 +1,7 @@
 <template>
   <div class="index">
     <top-bar></top-bar>
+    <router-view />
   </div>
 </template>
 
@@ -17,4 +18,8 @@ export default {
 </script>
 
 <style scoped>
+.index {
+  height: 100%;
+  background-color: #000;
+}
 </style>

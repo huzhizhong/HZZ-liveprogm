@@ -24,7 +24,12 @@ const router = new Router({
                 {
                     path: '/index',
                     name: 'index',
-                    component: HomeIndex
+                    component: HomeIndex,
+                    children:[{
+                        path: '/index',
+                        name: 'index',
+                        component:()=>import('../src/components/home/VedioList.vue')
+                    }]
                 },
                 {
                     path: '/friends',

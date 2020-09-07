@@ -28,16 +28,17 @@ export default {
       topIndex: 2,
     };
   },
-  methods:{
-      selectTopIndex:function(e){
-          this.topIndex = e;
-      }
-  }
+  methods: {
+    selectTopIndex: function (e) {
+      this.topIndex = e;
+    },
+  },
 };
 </script>
 
 <style scoped>
 .top-bar {
+  position: fixed;
   display: flex;
   width: 100%;
   height: 60px;
@@ -45,7 +46,8 @@ export default {
   color: #cccccc;
   padding: 20px;
   box-sizing: border-box;
-  background-color: #000;
+  /* background-color: #000; */
+  z-index: 999;
 }
 .iconfont {
   font-size: 24px;
