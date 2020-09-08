@@ -1,7 +1,7 @@
 <template>
   <div class="sign">
     <div class="sign-header">
-      <span class="icon">x</span>
+      <span class="icon">🔙</span>
       <span>帮助</span>
     </div>
     <div class="sign-content">
@@ -56,7 +56,7 @@ export default {
 
 <style scoped>
 .sign {
-  padding: 30px;
+  padding: 30px 15px;
 }
 
 .sign-header {

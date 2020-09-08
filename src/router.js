@@ -12,6 +12,7 @@ import Message from './components/message/Message.vue'
 
 import Login from './components/login/Login.vue'
 import PasLogin from './components/login/PasLogin.vue'
+import GetCode from './components/login/GetCode.vue'
 
 const router = new Router({
     routes: [
@@ -65,6 +66,11 @@ const router = new Router({
             path: '/paslogin',
             name: 'paslogin',
             component: PasLogin,
+        },
+        {
+            path: '/getcode',
+            name: 'getcode',
+            component: GetCode,
         }
     ],
 })

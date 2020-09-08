@@ -20,7 +20,13 @@
           </select>
         </div>
         <div class="inp">
-          <input type="text" class="inp-controll" placeholder="请输入手机号" />
+          <input
+            v-model="phone"
+            @input="chnageTel"
+            type="text"
+            class="inp-controll"
+            placeholder="请输入手机号"
+          />
         </div>
       </div>
 
@@ -29,7 +35,7 @@
       </div>
 
       <div class="code-btn">
-        <button>获取短信验证码</button>
+        <button :disabled="disabled" :class="[btnbg?'active':'']" @click="getCode">获取短信验证码</button>
       </div>
 
       <div class="other">
@@ -38,17 +44,17 @@
       </div>
     </div>
     <transition name="up">
-    <div class="mask" v-if="showMask">
-      <div class="oauth">
-        <ul>
-          <li class="ouath-item">今日头条登录</li>
-          <li class="ouath-item">QQ登录</li>
-          <li class="ouath-item">微信登录</li>
-          <li class="ouath-item">微博登录</li>
-          <li class="ouath-item last-item" @click="dismiss">取消</li>
-        </ul>
+      <div class="mask" v-if="showMask">
+        <div class="oauth">
+          <ul>
+            <li class="ouath-item">今日头条登录</li>
+            <li class="ouath-item">QQ登录</li>
+            <li class="ouath-item">微信登录</li>
+            <li class="ouath-item">微博登录</li>
+            <li class="ouath-item last-item" @click="dismiss">取消</li>
+          </ul>
+        </div>
       </div>
-    </div>
     </transition>
   </div>
 </template>
@@ -59,6 +65,9 @@ export default {
     return {
       telarea: "",
       showMask: false,
+      disabled: true,
+      btnbg: false,
+      phone: "",
     };
   },
   methods: {
@@ -68,13 +77,27 @@ export default {
     dismiss() {
       this.showMask = false;
     },
+    getCode() {
+      this.$router.push("/getcode");
+    },
+    chnageTel(e) {
+      this.phone = e.target.value;
+      var regtel = /^1[345789]{1}\d{9}$/;
+      if (regtel.test(this.phone)) {
+        this.btnbg = true;
+        this.disabled = false;
+      } else {
+        this.btnbg = false;
+        this.disabled = true;
+      }
+    },
   },
 };
 </script>
 
 <style scoped>
 .sign {
-  padding: 30px;
+  padding: 30px 15px;
 }
 
 .sign-header {
@@ -149,6 +172,11 @@ input::-webkit-input-placeholder {
   width: 100%;
   padding: 10px 0;
   border: none;
+  color: #fff;
+}
+
+.code-btn .active {
+  background-color: #fe2c55;
   color: #fff;
 }
 
