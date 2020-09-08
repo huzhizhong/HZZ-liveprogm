@@ -10,6 +10,9 @@ import Friends from './components/friends/Friends.vue'
 import Account from './components/account/Account.vue'
 import Message from './components/message/Message.vue'
 
+import Login from './components/login/Login.vue'
+import PasLogin from './components/login/PasLogin.vue'
+
 const router = new Router({
     routes: [
         {
@@ -25,10 +28,10 @@ const router = new Router({
                     path: '/index',
                     name: 'index',
                     component: HomeIndex,
-                    children:[{
+                    children: [{
                         path: '/index',
                         name: 'index',
-                        component:()=>import('../src/components/home/VedioList.vue')
+                        component: () => import('../src/components/home/VedioList.vue')
                     }]
                 },
                 {
@@ -52,10 +55,18 @@ const router = new Router({
                 //     component: Follow
                 // }
             ]
+        },
+        {
+            path: '/login',
+            name: 'login',
+            component: Login,
+        },
+        {
+            path: '/paslogin',
+            name: 'paslogin',
+            component: PasLogin,
         }
-
-
-    ]
+    ],
 })
 
 export default router
