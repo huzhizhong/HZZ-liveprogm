@@ -33,7 +33,7 @@
             <div class="comment-box">
               <div class="comment-item">
                 <div class="user-pic">
-                  <!-- <img src="../../assets/img/xxx.jpeg" /> -->
+                  <img src="../../assets/logo.png" />
                 </div>
                 <div class="item-info">
                   <div class="reply">
@@ -49,6 +49,28 @@
                   </div>
                 </div>
               </div>
+
+              <div class="sub-comment-item">
+                <div class="user-pic">
+                  <img src="../../assets/logo.png" />
+                </div>
+                <div class="item-info">
+                  <div class="reply">
+                    <p class="name">测试2</p>
+                    <p class="reply-des">
+                      <span>回复</span>
+                      <span class="re-name">测试员</span>
+                      <span>我是回复的内容</span>
+                      <span class="time">04-20</span>
+                    </p>
+                  </div>
+                  <div class="zan">
+                    <span class="iconfont icon-kongaixin"></span>
+                    <p>200</p>
+                  </div>
+                </div>
+              </div>
+              <div class="more">-------展开68条回复</div>
               <!-- 评论框 -->
               <div class="reply-input">
                 <input type="text" name id placeholder="留下你的精彩评论" />
@@ -212,7 +234,7 @@ export default {
   background: white;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  z-index: 999;
+  z-index: 9999;
   padding: 10px 10px;
   box-sizing: border-box;
 }
@@ -266,10 +288,28 @@ export default {
 }
 .zan .iconfont {
   font-size: 20px;
+  color: #ccc;
+  margin-left: 10px;
 }
 .zan p {
   color: #cccccc;
   margin-top: 5px;
+}
+
+.sub-comment-item {
+  display: flex;
+  margin-left: 33px;
+  margin-top: 0 10px;
+}
+
+.reply .re-name {
+  padding: 0 10px;
+  color: #666;
+}
+
+.more {
+  margin-left: 30px;
+  margin-top: 20px;
 }
 
 .reply-input {
